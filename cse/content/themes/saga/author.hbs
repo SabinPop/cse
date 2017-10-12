@@ -1,0 +1,25 @@
+{{!-- The tag below includes the header - partials/header.hbs --}}
+{{> header}}
+
+{{#author}}
+    <header id="header" class="animated fadeIn"{{#if cover}} style="background-image: url({{url cover}})"{{/if}}>
+        <div class="header-background">
+            <section class="blog-content">
+                <a id="site-url" class="blog-title" href="{{url}}" data-theme-url="{{theme_url}}">{{@settings.title}}</a>
+                <span class="blog-description">{{@settings.description}}</span>
+                {{> links}}
+            </section>
+            <section class="header-content">
+                <h1 class="post-title animated fadeInUp">{{name}}</h1>
+                <span class="post-data animated fadeInUp">{{bio}}</span>
+            </section>
+        </div>
+    </header>
+{{/author}}
+
+<main id="main" class="archive">
+    {{> loop}}
+</main>
+
+{{!-- The tag below includes the footer - partials/footer.hbs --}}
+{{> footer}}

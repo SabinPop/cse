@@ -1,0 +1,25 @@
+{{!-- The tag below includes the header - partials/header.hbs --}}
+{{> header}}
+
+<header id="header" class="animated fadeIn"{{#if @settings.cover}} style="background-image: url({{url @settings.cover}})"{{/if}}>
+    <div class="header-background">
+    <section class="blog-content">
+        <a id="site-url" class="blog-title" href="{{url}}" data-theme-url="{{theme_url}}">{{@settings.title}}</a>
+        <span class="blog-description">{{@settings.description}}</span>
+        {{> links}}
+    </section>
+    <section class="header-content">
+        <h1 class="post-title animated fadeInUp">Page Not Found</h1>
+    </section>
+    </div>
+</header>
+<main id="main" class="content">
+    <article class="animated fadeIn content post {{post_class}}">
+        <section class="post-content">
+            The page you requested could not be found.
+        </section>
+    </article>
+</main>
+
+{{!-- The tag below includes the footer - partials/footer.hbs --}}
+{{> footer}}

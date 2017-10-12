@@ -1,0 +1,27 @@
+{{!-- The tag below includes the header - partials/header.hbs --}}
+{{> header}}
+
+{{#post}}
+<header id="header" class="animated fadeIn"{{#if image}} style="background-image: url({{url image}})"{{/if}}>
+    <div class="header-background">
+        <section class="blog-content">
+            <a id="site-url" class="blog-title" href="{{url}}" data-theme-url="{{theme_url}}">{{@settings.title}}</a>
+            <span class="blog-description">{{@settings.description}}</span>
+            {{> links}}
+        </section>
+        <section class="header-content">
+            <h1 class="post-title animated fadeInUp">{{{title editable="true"}}}</h1>
+        </section>
+    </div>
+</header>
+<main id="main" class="content">
+    <article class="animated fadeIn content post {{post_class}}">
+        <section class="post-content">
+            {{content editable="true"}}
+        </section>
+    </article>
+</main>
+{{/post}}
+
+{{!-- The tag below includes the footer - partials/footer.hbs --}}
+{{> footer}}
