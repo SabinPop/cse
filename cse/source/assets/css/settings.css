@@ -1,0 +1,16 @@
+.cover,.favicon,.logo{background-position:center}
+.cover .controls .btn i,.favicon .controls .btn i,.logo .controls .btn i{transform:scale(1.2)}
+.settings-form{padding:2rem 1rem}
+.nav-tabs{margin-bottom:4rem}
+.cover .controls .btn,.favicon .controls .btn,.logo .controls .btn{margin-bottom:0}
+.cover{position:relative;height:200px;background-size:cover;border-radius:3px}
+.cover .controls{position:absolute;right:1rem;bottom:1rem}
+.favicon,.logo{position:relative;overflow:hidden;height:150px;background-repeat:no-repeat;background-size:contain}
+.favicon .controls,.logo .controls{position:absolute;right:1rem;bottom:1rem}
+.backups-table td,.backups-table th{vertical-align:middle}
+.backups-table .loader{padding:0 1.2rem}
+.backups-table-none{text-align:center;font-size:1.2rem;border:2px dashed #ddd;border-radius:5px;color:#aaa;padding:4rem 1rem}
+.backups-table-none i{font-size:5rem;display:block;margin-bottom:1rem}
+@media (max-width:543px){.settings-form{padding:1.5rem .5rem}
+.nav-tabs{margin-bottom:2rem}
+}

@@ -1,0 +1,19 @@
+.editor,.editor-frame{overflow-y:auto;-webkit-overflow-scrolling:touch}
+.editor{position:relative}
+.editor-frame{border:none;width:100%;height:100%;display:block;transition:opacity .25s;opacity:1}
+.editor-frame.fade-out{opacity:0}
+.post-image{position:relative;height:200px;background-size:cover;background-position:center;border-radius:3px;transform:translate3d(0,0,0)}
+.post-image .controls{position:absolute;right:1rem;bottom:1rem}
+.post-image .controls .btn{margin-bottom:0}
+.settings-panel .checkbox .tag{font-weight:300;font-size:1rem}
+.history-table tr:first-child td{border-top:none}
+.history-table td,.history-table th{vertical-align:middle}
+.history-table .avatar{width:1.5em;height:1.5em;border-radius:50%;vertical-align:middle}
+.history-table .loader{padding:0 1.2rem}
+.history-none{text-align:center;font-size:1.2rem;border:2px dashed #ddd;border-radius:5px;color:#aaa;padding:4rem 1rem}
+.history-none i{font-size:5rem;display:block;margin-bottom:1rem}
+.dropzone{position:fixed;z-index:2000;top:0;right:0;bottom:0;left:0;background:rgba(255,255,255,.9);padding:2rem}
+.dropzone .dropzone-target{font-size:2rem;font-weight:700;color:#333;border:.5rem solid #333;border-radius:5px;text-align:center;transition:.2s font-size,.2s color,.2s border-color}
+.dropzone .dropzone-target.active{font-size:2.5rem;color:#09d;border-color:#09d}
+.dropzone .dropzone-target:first-child{height:calc(30% - 1rem);margin-bottom:1rem}
+.dropzone .dropzone-target:last-child{height:70%}

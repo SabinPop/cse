@@ -1,0 +1,18 @@
+.navigation-form{padding:2rem 1rem 0}
+.add-form,.navigation-list-item{display:table;width:100%;padding-bottom:1rem}
+.add-form.sortable-chosen,.navigation-list-item.sortable-chosen{opacity:1}
+.add-form.sortable-ghost,.navigation-list-item.sortable-ghost{opacity:0}
+.add-form .nav-col,.navigation-list-item .nav-col{vertical-align:middle;padding:0 .25rem;display:table-cell}
+.add-form .nav-col:first-child,.navigation-list-item .nav-col:first-child{width:2rem}
+.add-form .nav-col:nth-child(2),.navigation-list-item .nav-col:nth-child(2){width:33%}
+.add-form .nav-col:nth-child(3),.navigation-list-item .nav-col:nth-child(3){width:auto}
+.add-form .nav-col:last-child,.navigation-list-item .nav-col:last-child{width:2rem}
+.add-form .handle,.navigation-list-item .handle{color:#aaa;font-size:1.1rem;cursor:move}
+.add-form{border-radius:3px;padding:0 1rem;margin-bottom:1rem}
+.add-form .nav-col:nth-child(3){width:22%}
+.add-form .nav-colnth-child(4){width:auto}
+@media (max-width:543px){.navigation-form{padding:1.5rem .5rem}
+.add-form{padding:1rem;display:block}
+.add-form .nav-col:nth-child(n){width:100%;display:block;margin-bottom:.5rem}
+.add-form .nav-col:last-child{margin-bottom:0}
+}

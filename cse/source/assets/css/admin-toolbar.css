@@ -1,0 +1,7 @@
+.pl-toolbar,.pl-toolbar *{background:0 0;border:none;box-sizing:border-box;padding:0;margin:0;transition:none}
+.pl-toolbar{position:fixed;z-index:9999;bottom:20px;right:20px;background:#252525;border-radius:3px;color:#fff}
+.pl-item{background-repeat:no-repeat;background-position:center;background-size:24px 24px;color:#fff;text-decoration:none;display:inline-block;text-align:center;width:44px;height:44px;line-height:44px;float:left;transition:.2s transform ease}
+.pl-item:hover{color:#09d;transform:scale(1.2)}
+.pl-home{background-image:url(../img/12.png)}
+.pl-new-post{background-image:url(../img/icon-plus-white.svg)}
+.pl-edit-author,.pl-edit-post,.pl-edit-tag{background-image:url(../img/icon-pencil-white.svg)}
