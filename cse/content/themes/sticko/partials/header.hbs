@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    {{! Page Meta }}
+    <title>{{@meta.title}}</title>
+    <meta name="description" content="{{@meta.description}}">
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{! Styles & Scripts }}
+    <link rel="stylesheet" href="{{theme_url "assets/css/lib.css"}}">
+    <link rel="stylesheet" href="{{theme_url "assets/css/style.css"}}">
+
+    {{!-- Favicon --}}
+    <link rel="shortcut icon" href="{{url @settings.favicon}}">
+
+    {{! Touch icon }}
+    <link rel="apple-touch-icon" href="{{theme_url "assets/images/apple-touch-icon.png"}}" />
+
+    {{! Postleaf outputs important style and meta data with this tag }}
+    {{postleaf_head}}
+</head>
+<body class="{{body_class}}">

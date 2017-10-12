@@ -1,0 +1,19 @@
+{{!-- The tag below includes the header - partials/header.hbs --}}
+{{> header}}
+
+<div id="main-content" role="main" class="pure-g-r">
+    <aside id="main-sidebar" class="pure-u-1-2"{{#if tag.cover}} style="background-image:url({{url tag.cover}})"{{/if}}>
+        {{> aside}}
+    </aside>
+
+    <section id="main" class="pure-u-1-2">
+        {{! The tag below includes the post loop - partials/loop.hbs }}
+        {{> loop}}
+
+        {{! The tag below includes pagination - partials/pagination.hbs }}
+        {{> pagination}}
+    </section>
+</div>
+
+{{!-- The tag below includes the footer - partials/footer.hbs --}}
+{{> footer}}

@@ -1,0 +1,9 @@
+{
+    "name": "Sticko",
+    "description": "A fork of the Sticko Ghost theme by @damianmuti.",
+    "version": "0.0.0",
+    "requires": "1.0.0",
+    "author": "Cory LaViska",
+    "license": "CCA 4.0",
+    "url": "https://github.com/postleaf/sticko"
+}

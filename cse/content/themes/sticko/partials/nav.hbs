@@ -1,0 +1,9 @@
+{{#navigation}}
+    <form class="nav-search" action="{{search_url}}" method="GET">
+        <input type="search" name="s" placeholder="Search">
+    </form>
+
+    {{#each items}}
+        <a href="{{url link}}">{{label}}</a>
+    {{/each}}
+{{/navigation}}

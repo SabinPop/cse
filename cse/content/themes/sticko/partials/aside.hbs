@@ -1,0 +1,75 @@
+<section class="sidebar-data-holder">
+    <div class="spinner" role="spinner"><div class="spinner-icon"></div></div>
+    <nav class="main-nav">
+        <button class="nav-control"><i class="icon-hamburguer"></i></button>
+        {{> nav}}
+    </nav>
+    <div class="logo"><a href="/" title="Back to home">{{@settings.title}}</a></div>
+
+    {{!-- Blog index, search, error, pages --}}
+    {{#is @template 'in' 'blog,page,search,error'}}
+        <div class="aside-content">
+            <header class="aside-title">{{@settings.tagline}}</header>
+        </div>
+    {{/is}}
+
+    {{!-- Posts --}}
+    {{#is @template 'post'}}
+        {{#author}}
+            <div class="aside-content">
+                {{#if avatar}}
+                    <figure class="aside-image"><img class="avatar-image" src="{{url avatar}}" alt="Avatar"></figure>
+                {{/if}}
+                <header class="aside-title">{{name}}</header>
+                <p class="aside-description">{{bio}}</p>
+                {{#if location}}<p><small>{{location}}</small></p>{{/if}}
+            </div>
+        {{/author}}
+    {{/is}}
+
+    {{!-- Authors --}}
+    {{#is @template 'author'}}
+        {{#author}}
+            <div class="aside-content">
+                {{#if avatar}}
+                    <figure class="aside-image"><img class="avatar-image" src="{{url avatar}}" alt="Logo"></figure>
+                {{/if}}
+                <header class="aside-title">{{name}}</header>
+                <p class="aside-description">{{bio}}</p>
+            </div>
+        {{/author}}
+    {{/is}}
+
+    {{!-- Tags --}}
+    {{#is @template 'tag'}}
+        {{#tag}}
+            <div class="aside-content">
+                <header class="aside-title">{{name}}</header>
+                <p class="aside-description">{{description}}</p>
+            </div>
+        {{/tag}}
+    {{/is}}
+
+    <!-- Social media badges -->
+    <menu class="social-media-share">
+        {{!--
+        <a href="#" class="icon-facebook" rel="external" title="My Facebook"></a>
+        <a href="#" class="icon-twitter" rel="external" title="My Twitter"></a>
+        <a href="#" class="icon-googleplus" rel="external" title="My Google+"></a>
+        <a href="#" class="icon-flickr" rel="external" title="My Flickr"></a>
+        <a href="#" class="icon-linkedin" rel="external" title="My LinkedIn"></a>
+        <a href="#" class="icon-pinterest" rel="external" title="My Pinterest"></a>
+        <a href="#" class="icon-vimeo" rel="external" title="My Vimeo"></a>
+        <a href="#" class="icon-github" rel="external" title="My GitHub"></a>
+        <a href="#" class="icon-dribbble" rel="external" title="My Dribbble"></a>
+        <a href="#" class="icon-stumbleupon" rel="external" title="My Stumbleupon"></a>
+        <a href="#" class="icon-lastfm" rel="external" title="My Lastfm"></a>
+        <a href="#" class="icon-rdio" rel="external" title="My Rdio"></a>
+        <a href="#" class="icon-youtube" rel="external" title="My YouTube"></a>
+        <a href="#" class="icon-mail" rel="external" title="My Mail"></a> -->
+        --}}
+        <a href="{{feed_url}}" class="icon-feed" rel="external" title="RSS Feed"></a>
+    </menu>
+
+    <footer id="main-footer"><p>Free <a href="https://www.postleaf.org/" title="Postleaf" rel="external">Postleaf</a> theme originally designed by <a href="https://twitter.com/damianmuti" title="Go to @damianmuti's Twitter" rel="external">@damianmuti</a></p></footer>
+</section>

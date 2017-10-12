@@ -1,0 +1,36 @@
+{{!-- The tag below includes the header - partials/header.hbs --}}
+{{> header}}
+
+<div id="main-content" role="main" class="pure-g-r">
+    <aside id="main-sidebar" class="pure-u-1-2"{{#if @settings.cover}} style="background-image:url({{url @settings.cover}})"{{/if}}>
+        {{> aside}}
+    </aside>
+
+    <section id="main" class="pure-u-1-2">
+        <article class="search">
+            <header class="search-header">
+                <h1>
+                    {{#if query}}
+                        Searching for “{{query}}”
+                    {{else}}
+                        Search
+                    {{/if}}
+                </h1>
+
+                <form class="search-form" action="{{search_url}}" method="GET">
+                    <input type="search" name="s" placeholder="Search">
+                    <button type="submit">Go</button>
+                </form>
+            </header>
+
+            {{! The tag below includes the post loop - partials/loop.hbs }}
+            {{> loop}}
+
+            {{! The tag below includes pagination - partials/pagination.hbs }}
+            {{> pagination}}
+        </article>
+    </section>
+</div>
+
+{{!-- The tag below includes the footer - partials/footer.hbs --}}
+{{> footer}}
