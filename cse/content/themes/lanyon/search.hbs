@@ -1,0 +1,37 @@
+{{!-- Includes partials/header.hbs --}}
+{{> header}}
+
+  <div class="search-meta">
+    <h1 class="search-query">
+      {{#if query}}
+        Results for “{{query}}”
+      {{else}}
+        Search
+      {{/if}}
+    </h1>
+    <div class="post-count">
+      {{#if query}}
+        {{plural (number pagination.total_items) none="No posts" singular="One post" plural="% posts"}}
+      {{else}}
+        What are you looking for?
+      {{/if}}
+    </div>
+  </div>
+
+  <form class="search-form" action="{{search_url}}" method="GET">
+    <input type="search" name="s" placeholder="Search">
+    <button type="submit">Go</button>
+  </form>
+
+  <hr>
+
+  {{> loop}}
+</div>
+
+{{! Previous/next page links - displayed on every page }}
+{{#is pagination.total_items '>' 0}}
+  {{> pagination}}
+{{/is}}
+
+{{!-- Includes partials/footer.hbs --}}
+{{> footer}}

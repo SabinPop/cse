@@ -1,0 +1,17 @@
+{{!-- Includes partials/header.hbs --}}
+{{> header}}
+
+<article class="{{post_class}}">
+{{#post}}
+
+  <h1 class="post-title">{{title editable="true"}}</h1>
+
+  <section class="post-content">
+    {{content editable="true"}}
+  </section>
+
+{{/post}}
+</article>
+
+{{!-- Includes partials/footer.hbs --}}
+{{> footer}}

@@ -1,0 +1,23 @@
+{{!-- Includes partials/header.hbs --}}
+{{> header}}
+
+  {{#author}}
+    <div class="author-meta">
+      <h1 class="author-name">{{name}}</h1>
+      <div class="post-count">
+        {{plural (number ../pagination.total_items) none="No posts" singular="One post" plural="% posts"}}
+      </div>
+      <div class="author-bio">{{bio}}</div>
+    </div>
+  {{/author}}
+
+  <hr>
+
+  {{> loop}}
+</div>
+
+{{! Previous/next page links - displayed on every page }}
+{{> pagination}}
+
+{{!-- Includes partials/footer.hbs --}}
+{{> footer}}

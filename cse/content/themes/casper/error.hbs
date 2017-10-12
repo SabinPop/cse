@@ -1,0 +1,30 @@
+{{!-- The tag below includes the header - partials/header.hbs --}}
+{{> header}}
+
+{{!-- This is the error/not found template. --}}
+
+{{!-- Everything inside the #post tags pulls data from the page --}}
+<header class="main-header post-head {{#if @settings.cover}}" style="background-image: url({{url @settings.cover}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav {{#if @settings.cover}}overlay{{/if}} clearfix">
+        {{#if @settings.logo}}<a class="blog-logo" href="{{url}}"><img src="{{url @settings.logo}}" alt="{{@settings.title}}" /></a>{{/if}}
+        <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Not Found</h1>
+        </header>
+
+        <section class="post-content">
+            <p>The page you were looking for could not be found.</p>
+        </section>
+
+    </article>
+</main>
+
+
+{{!-- The tag below includes the footer - partials/footer.hbs --}}
+{{> footer}}

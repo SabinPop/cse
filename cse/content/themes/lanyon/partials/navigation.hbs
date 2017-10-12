@@ -1,0 +1,27 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+ styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>{{@settings.tagline}}</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    {{! The code below dynamically generates the sidebar nav }}
+    {{#navigation}}
+        {{#each items}}
+            <a class="sidebar-nav-item sidebar-nav-{{slug}} {{#if current}}active{{/if}}" href="{{url link}}">{{label}}</a>
+        {{/each}}
+    {{/navigation}}
+  </nav>
+
+  <form class="sidebar-search" action="{{search_url}}" method="GET">
+    <input type="search" name="s" placeholder="Search">
+  </form>
+
+  <div class="sidebar-item">
+    <p>&copy; {{date format="%Y"}}. All rights reserved.</p>
+  </div>
+</div>

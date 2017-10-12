@@ -1,0 +1,23 @@
+{{!-- Includes partials/header.hbs --}}
+{{> header}}
+
+  {{#tag}}
+    <div class="tag-meta">
+      <h1 class="tag-name">Tagged “{{name}}”</h1>
+      <div class="post-count">
+        {{plural (number ../pagination.total_items) none="No posts" singular="One post" plural="% posts"}}
+      </div>
+      <div class="tag-description">{{description}}</div>
+    </div>
+  {{/tag}}
+
+  <hr>
+
+  {{> loop}}
+</div>
+
+{{! Previous/next page links - displayed on every page }}
+{{> pagination}}
+
+{{!-- Includes partials/footer.hbs --}}
+{{> footer}}
